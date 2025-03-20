@@ -14,8 +14,7 @@ public class Movies {
 
     private int movies_id ;
     private String name;
-    private String description;
 
-    @OneToMany(mappedBy = "movies")
-    private List<Reviews> review;
+
+
 }
