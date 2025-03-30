@@ -28,7 +28,9 @@ public class ReviewsService {
     private MoviesRepo moviesRepo;
 
     @Transactional
-    public void addReview(int userId, Reviews review) {
+    public void addReview( Reviews review) {
+        int userId = review.getUserId();
+        int movieId = review.getMovieId();
         logger.info("Adding review for user ID: " + userId);
 
         // Check if user exists
@@ -36,16 +38,16 @@ public class ReviewsService {
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
         // Check if movie exists
-        if (review.getMovies() == null || review.getMovies().getMovies_id() == 0) {
+        if (review.getMovieId() == 0 ) {
             throw new RuntimeException("Movie ID is missing in the request");
         }
 
-        Movies movie = moviesRepo.findById(review.getMovies().getMovies_id())
+        Movies movie = moviesRepo.findById(review.getMovieId())
                 .orElseThrow(() -> new RuntimeException("Movie not found"));
 
         // Set relationships
-        review.setUser(user);
-        review.setMovies(movie);
+        review.setUserId(userId);
+        review.setMovieId(movieId);
 
         // Save review
         reviewsRepo.save(review);
@@ -54,4 +56,5 @@ public class ReviewsService {
    public List<Reviews> findByUserId(int userId){
         return reviewsRepo.findByUserId(userId);
    }
+
 }

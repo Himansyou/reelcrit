@@ -2,6 +2,8 @@ package com.himanshu.reelcrit;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class ReelcritApplication {
@@ -10,5 +12,8 @@ public class ReelcritApplication {
 
 		SpringApplication.run(ReelcritApplication.class, args);
 	}
-
+	@Bean
+	public RestTemplate restTemplate(){
+		return new RestTemplate();
+	}
 }

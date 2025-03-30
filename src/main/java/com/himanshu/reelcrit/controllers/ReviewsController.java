@@ -13,8 +13,8 @@ public class ReviewsController {
     @Autowired
   private ReviewsService reviewsService;
 
-    @PostMapping("{userId}/add")
-    public void addReview(@PathVariable int userId ,@RequestBody Reviews review){
-            reviewsService.addReview(userId,review);
+    @PostMapping("/add")
+    public void addReview(@RequestBody Reviews review){
+            reviewsService.addReview(review);
     }
 }

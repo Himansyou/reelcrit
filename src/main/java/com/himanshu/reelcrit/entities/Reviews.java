@@ -12,14 +12,14 @@ public class Reviews {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String content;
+    private int rating;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id" , nullable = false)
-    private Users user;
-    @ManyToOne
-    @JoinColumn(name = "movie_id" , nullable = false)
-    private Movies movies;
+    @Column(name = "user_id", nullable = false)
+    private int userId;
 
-    private int rating ;
+    @Column(name = "movie_id", nullable = false)
+    private int movieId;
 }
+

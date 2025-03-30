@@ -10,11 +10,14 @@ import java.util.List;
 public class Movies {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-    private int movies_id ;
     private String name;
 
+    private String type;
 
+    private int year;
+
+    private String imageUrl;
 
 }
