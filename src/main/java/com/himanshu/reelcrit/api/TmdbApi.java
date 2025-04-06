@@ -36,5 +36,11 @@ public class TmdbApi {
 
         @JsonProperty("title")
         private String title;
+        @JsonProperty("name")
+        private String name;
+        @JsonProperty("media_type")
+        private String mediaType;
+        @JsonProperty("first_air_date")
+        private String firstAirDate;
     }
 }

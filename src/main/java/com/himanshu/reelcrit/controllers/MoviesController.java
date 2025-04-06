@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@CrossOrigin
+
 @RequestMapping("auth/movies")
 public class MoviesController {
     @Autowired
@@ -34,6 +34,7 @@ public class MoviesController {
        return new ResponseEntity<>(reviews,HttpStatus.OK);
 
     }
+
     @GetMapping("/popular")
     public TmdbApi getPopularMovies() {
         return moviesService.getPopularMovies();

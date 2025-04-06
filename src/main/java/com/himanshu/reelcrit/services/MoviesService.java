@@ -17,9 +17,9 @@ import java.util.List;
 public class MoviesService {
     @Value("${api.key.watchmode}")
     private String apiKey;
-    private String searchApi = "https://api.themoviedb.org/3/search/movie?api_key=API_KEY&query=NAME";
+    private String searchApi = "https://api.themoviedb.org/3/search/multi?api_key=API_KEY&query=NAME";
 
-    private String popularApi = "https://api.themoviedb.org/3/movie/popular?api_key=API_KEY";
+    private String popularApi = "https://api.themoviedb.org/3/trending/all/week?api_key=API_KEY";
 
     @Autowired
     private RestTemplate restTemplate;
@@ -39,7 +39,7 @@ public class MoviesService {
     }
 
     public TmdbApi getPopularMovies() {
-        String finalApi = searchApi.replace("API_KEY", apiKey);
+        String finalApi = popularApi.replace("API_KEY", apiKey);
         ResponseEntity<TmdbApi> response = restTemplate.exchange(
                 finalApi, HttpMethod.GET, null, TmdbApi.class);
         return response.getBody();

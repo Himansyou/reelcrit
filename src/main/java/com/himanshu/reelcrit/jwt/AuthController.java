@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:5173")
 @RequestMapping("/auth")
 public class AuthController {
     private final UsersRepo userRepository;
@@ -24,7 +25,8 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody Users user) {
-        user.setPassword(passwordEncoder.encode(user.getPassword())); // Hash password
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+
         userRepository.save(user);
         return ResponseEntity.ok("User registered successfully!");
     }
