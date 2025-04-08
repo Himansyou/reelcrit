@@ -7,6 +7,8 @@ target/
 # Ignore Spring Boot properties files
 src/main/resources/application.properties
 src/main/resources/application.yml
+
+
 .env
 
 

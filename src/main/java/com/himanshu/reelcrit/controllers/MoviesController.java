@@ -1,6 +1,8 @@
 package com.himanshu.reelcrit.controllers;
 
 import com.himanshu.reelcrit.api.TmdbApi;
+import com.himanshu.reelcrit.api.TmdbMedia;
+import com.himanshu.reelcrit.entities.Movies;
 import com.himanshu.reelcrit.entities.Reviews;
 import com.himanshu.reelcrit.services.MoviesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +35,13 @@ public class MoviesController {
        List<Reviews> reviews  = moviesService.getReviewsForMovie(id);
        return new ResponseEntity<>(reviews,HttpStatus.OK);
 
+    }
+    @GetMapping("/{type}/{id}")
+    public TmdbMedia getMediaDetails(
+            @PathVariable String type,
+            @PathVariable Long id) {
+
+        return moviesService.getMediaDetails(type, id);
     }
 
     @GetMapping("/popular")
