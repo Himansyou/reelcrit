@@ -48,6 +48,7 @@ public class ReviewsService {
         // Set relationships
         review.setUserId(userId);
         review.setMovieId(movieId);
+        review.setUsername(user.getUsername());
 
         // Save review
         reviewsRepo.save(review);

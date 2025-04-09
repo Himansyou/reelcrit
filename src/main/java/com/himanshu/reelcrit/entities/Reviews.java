@@ -21,5 +21,7 @@ public class Reviews {
 
     @Column(name = "movie_id", nullable = false)
     private int movieId;
+
+    private String username;
 }
 
