@@ -15,5 +15,8 @@ public interface UsersRepo extends JpaRepository<Users, Integer> {
     UserProjection findProjectedById(@Param("id") int id);
 
     Optional<Users> findByUsername(String username);
+
+    boolean existsByUsername(String username);
+
 }
 

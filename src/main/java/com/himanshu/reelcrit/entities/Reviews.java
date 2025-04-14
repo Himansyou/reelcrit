@@ -14,7 +14,7 @@ public class Reviews {
     private int id;
 
     private String content;
-    private int rating;
+
 
     @Column(name = "user_id", nullable = false)
     private int userId;

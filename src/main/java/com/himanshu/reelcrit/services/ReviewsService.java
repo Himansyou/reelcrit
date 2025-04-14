@@ -37,18 +37,15 @@ public class ReviewsService {
         Users user = usersRepo.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
-        // Check if movie exists
-        if (review.getMovieId() == 0 ) {
-            throw new RuntimeException("Movie ID is missing in the request");
-        }
 
-        Movies movie = moviesRepo.findById(review.getMovieId())
-                .orElseThrow(() -> new RuntimeException("Movie not found"));
+
+
 
         // Set relationships
         review.setUserId(userId);
         review.setMovieId(movieId);
         review.setUsername(user.getUsername());
+        review.setContent(review.getContent());
 
         // Save review
         reviewsRepo.save(review);

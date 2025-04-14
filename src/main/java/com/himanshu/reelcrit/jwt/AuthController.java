@@ -24,6 +24,9 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody Users user) {
+        if (userRepository.existsByUsername(user.getUsername())) {
+            return ResponseEntity.badRequest().body("Username already exists");
+        }
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         userRepository.save(user);
@@ -39,7 +42,7 @@ public class AuthController {
             throw new RuntimeException("Invalid credentials");
         }
 
-        String token = jwtUtil.generateToken(existingUser.getUsername());
+        String token = jwtUtil.generateToken(existingUser.getUsername(),existingUser.getId());
 
         Map<String, String> response = new HashMap<>();
         response.put("token", token);

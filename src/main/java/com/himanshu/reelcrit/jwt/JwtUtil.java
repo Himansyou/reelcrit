@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 
 import java.security.Key;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 @Component
 public class JwtUtil {
@@ -16,7 +18,7 @@ public class JwtUtil {
     @Value("${sign.key}")
     private String SECRET_KEY;
 
-    private static final long EXPIRATION_TIME = 3600000; // 1 hour
+
     private Key key;
 
     // Constructor to initialize the key after SECRET_KEY is injected
@@ -25,12 +27,14 @@ public class JwtUtil {
         this.key = Keys.hmacShaKeyFor(secretKey.getBytes());
     }
 
-    public String generateToken(String username) {
+    public String generateToken(String username, Long userId) {
+        Map<String, Object> claims = new HashMap<>();
+        claims.put("userId", userId);
         return Jwts.builder()
+                .setClaims(claims)
                 .setSubject(username)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
-                .signWith(key, SignatureAlgorithm.HS256)
+                .setExpiration(new Date(System.currentTimeMillis() + 60 * 1000 * 60 * 10))                 .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }
 
