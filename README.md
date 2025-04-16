@@ -33,7 +33,7 @@
 ## 📂 Project Structure
 reelcrit/ ├── src/ │ ├── main/ │ │ ├── java/com/reelcrit/ │ │ └── resources/ │ └── test/ ├── Dockerfile ├── pom.xml └── README.md
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 Spring Boot – REST API & Backend logic
 
 Spring Security + JWT – Authentication
