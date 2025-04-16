@@ -31,4 +31,5 @@
 ---
 
 ## 📂 Project Structure
+reelcrit/ ├── src/ │ ├── main/ │ │ ├── java/com/reelcrit/ │ │ └── resources/ │ └── test/ ├── Dockerfile ├── pom.xml └── README.md
 
