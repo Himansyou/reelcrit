@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://your-image-url.com/banner.png" alt="Reelcrit Logo" width="600"/>
+  <img src="https://github.com/user-attachments/assets/b33290cd-b45a-4781-b72b-d9e154630e4e" alt="Reelcrit Logo" width="600"/>
 </p>
 
 <h1 align="center">🎬 Reelcrit - Backend</h1>
