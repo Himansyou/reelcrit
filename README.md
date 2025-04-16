@@ -33,3 +33,11 @@
 ## 📂 Project Structure
 reelcrit/ ├── src/ │ ├── main/ │ │ ├── java/com/reelcrit/ │ │ └── resources/ │ └── test/ ├── Dockerfile ├── pom.xml └── README.md
 
+
+Method | Endpoint | Description | Auth Required
+POST | /auth/register | Register new user | ❌
+POST | /auth/login | Login & receive JWT token | ❌
+GET | /reviews/all | Get all reviews | ❌
+POST | /reviews/add | Submit a review | ✅
+GET | /reviews/user/{id} | Get reviews by user | ❌
+DELETE | /reviews/delete/{id} | Delete a review | ✅
