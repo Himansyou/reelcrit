@@ -2,7 +2,8 @@
   <img src="https://github.com/user-attachments/assets/b33290cd-b45a-4781-b72b-d9e154630e4e" alt="Reelcrit Logo" height="300" width="900"/>
 </p>
 
-<h1 align="center"> [🎬 Reelcrit - Backend](https://reelcrit.onrender.com/auth/movies/popular)</h1>
+<h1 align="center">🎬 [Reelcrit - Backend](https://reelcrit.onrender.com/auth/movies/popular)</h1>
+
 
 <p align="center">
   A RESTful Spring Boot API for Reelcrit — a movie review platform where users can read and post reviews.<br>
