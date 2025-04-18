@@ -29,7 +29,12 @@ public class SecurityConfig {
                 .cors(cors -> {}) // ✅ Tells Spring to use your CorsConfig bean
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/**").permitAll()
+                        .requestMatchers("/auth/**",
+                                "/index.html",
+                                "/css/**", "/js/**", "/images/**" ,
+                                "/swagger-ui.html",
+                                "/swagger-ui/**",
+                                "/v3/api-docs/**","/").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

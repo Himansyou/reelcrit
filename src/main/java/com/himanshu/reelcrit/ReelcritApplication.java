@@ -16,4 +16,5 @@ public class ReelcritApplication {
 	public RestTemplate restTemplate(){
 		return new RestTemplate();
 	}
+
 }
