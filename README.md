@@ -85,8 +85,8 @@ docker run -p 8080:8080 --env-file .env reelcrit-backend
 ## 🔗 Links
 
 - 🌐 **Frontend**: [reelcrit.vercel.app](https://reelcrit.vercel.app)
-- 🔙 **Backend**: [reelcrit-backend.onrender.com](https://reelcrit-backend.onrender.com)
-- 📖 **API Docs**: [Swagger UI](https://reelcrit-backend.onrender.com/swagger-ui/index.html)
+- 🔙 **Backend**: [reelcrit-backend.onrender.com](https://reelcritbackend.onrender.com)
+- 📖 **API Docs**: [Swagger UI](https://reelcritbackend.onrender.com/swagger-ui/index.html)
 
 ## 👨‍💻 Connect
 
