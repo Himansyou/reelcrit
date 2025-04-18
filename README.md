@@ -1,4 +1,4 @@
-<p align="center">
+![image](https://github.com/user-attachments/assets/35e04eeb-1f4e-425d-a0b6-2c4480755e9c)<p align="center">
   <img src="https://github.com/user-attachments/assets/b33290cd-b45a-4781-b72b-d9e154630e4e" alt="Reelcrit Logo" height="300" width="900"/>
 </p>
 
@@ -45,12 +45,19 @@ docker run -p 8080:8080 --env-file .env reelcrit-backend
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `POST` | `/api/auth/register` | Register new user |
-| `POST` | `/api/auth/login` | Login and get token |
-| `GET`  | `/api/movies` | Get all movies |
-| `GET`  | `/api/movies/{id}` | Get movie details |
-| `GET`  | `/api/reviews/movie/{movieId}` | Get movie reviews |
-| `POST` | `/api/reviews` | Create review |
+| `GET` | `/auth/health/ping-db` | Checks if MySQL DB is alive |
+🎬 Movies/Series API
+| `GET` | `/auth/movies/search/{name}` | Search movies/series by name |
+| `GET`  | `/auth/movies/reviews/{id}` | Get reviews for a specific Movie/Series (by ID)|
+| `GET`  | `/auth/movies/{type}/{id}` | 	Get detailed info of movie/show by type & ID |
+| `GET`  | `/auth/movies/popular` | Get trending Series/Movie |
+📝 Reviews API
+| `POST` | `/api/Reviews/add` | 	Add a new review |
+👤 Users API
+| `POST` | `/api/Users/create` | Create a new user |
+| `POST` | `/api/Users/{id}` | 	Get user details by user ID |
+| `POST` | `/api/Users/{userId}/reviews` | Get reviews submitted by a user |
+
 
 ## 🛠️ Tech Stack
 
