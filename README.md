@@ -2,7 +2,7 @@
   <img src="https://github.com/user-attachments/assets/b33290cd-b45a-4781-b72b-d9e154630e4e" alt="Reelcrit Logo" height="300" width="900"/>
 </p>
 
-[# 🎬 Reelcrit Api (backend for Reelcrit)](https://reelcrit.onrender.com/)
+# [🎬 Reelcrit Api (backend for Reelcrit)](https://reelcrit.onrender.com/)
 
 > A sleek movie review platform with Spring Boot backend and React frontend
 
