@@ -2,8 +2,14 @@
   <img src="https://github.com/user-attachments/assets/b33290cd-b45a-4781-b72b-d9e154630e4e" alt="Reelcrit Logo" height="300" width="900"/>
 </p>
 
-<h1 align="center"> [🎬 Reelcrit - Backend]
-  (https://reelcrit.onrender.com)</h1>
+<h1 align="center">🎬 Reelcrit - Backend</h1>
+
+<p align="center">
+  <a href="https://reelcrit.onrender.com" target="_blank">
+    <img src="https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=vercel" alt="Live Demo">
+  </a>
+</p>
+
 
 > A sleek movie review platform with Spring Boot backend and React frontend
 
