@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://reelcrit.onrender.com" target="_blank">
-    <img src="https://img.shields.io/badge/Click Visit-blue?style=for-the-badge&logo=vercel" alt="Click to Visit">
+    <img src="https://img.shields.io/badge/Click to Visit-blue?style=for-the-badge&logo=vercel" alt="Click to Visit">
   </a>
 </p>
 
