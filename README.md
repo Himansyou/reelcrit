@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://reelcrit.onrender.com" target="_blank">
-    <img src="https://img.shields.io/badge/Visit-blue?style=for-the-badge&logo=vercel" alt="Visit">
+    <img src="https://img.shields.io/badge/Click-To-Visit-blue?style=for-the-badge&logo=vercel" alt="Click to Visit">
   </a>
 </p>
 
@@ -21,11 +21,12 @@
 
 ## ✨ Features
 
-- 🔐 **JWT Authentication** - Secure user accounts
-- 🎭 **Movie Reviews** - Create, read, update, and delete reviews
-- ⭐ **Ratings** - Rate your favorite movies
-- 🔍 **Search & Filter** - Find exactly what you're looking for
-- 📱 **Responsive Design** - Works on all devices
+- 🔐 JWT Authentication (Login/Signup)
+ - 📝 Create, Read, and Manage Movie Reviews
+ - 🧑 Public access to reviews without login
+ - 📦 RESTful API for frontend integration
+ - 💾 MySQL Database hosted on Railway
+ - 🚀 Dockerized for easy deployment
 
 ## 🚀 Quick Start
 
@@ -35,6 +36,15 @@ git clone https://github.com/Himansyou/reelcrit.git
 
 # Navigate to directory
 cd reelcrit
+#Replace your Database (mysql) credentials in Applications file
+spring.datasource.url=Replace-With-Your-Url
+spring.datasource.username=DB-User
+spring.datasource.password=DB-Password
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+frontend.url=Your-frontend-website (to make it CORS proof)
+
+#Get your TMDB api key from their site then
+api.key.watchmode=Your-Api-Key
 
 # Install dependencies & run
 mvn clean install
@@ -68,7 +78,7 @@ docker run -p 8080:8080 --env-file .env reelcrit-backend
 
 ## 🛠️ Tech Stack
 
-- **Backend**: Java 17, Spring Boot 3, JWT, PostgreSQL
+- **Backend**: Java 17, Spring Boot 3, JWT, MySql
 - **Deployment**: Docker, Render
 - **Documentation**: Swagger/OpenAPI
 
