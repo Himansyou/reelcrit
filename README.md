@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/35e04eeb-1f4e-425d-a0b6-2c4480755e9c)<p align="center">
+
   <img src="https://github.com/user-attachments/assets/b33290cd-b45a-4781-b72b-d9e154630e4e" alt="Reelcrit Logo" height="300" width="900"/>
 </p>
 
